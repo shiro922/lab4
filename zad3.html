@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script>
+        createForm=function(){
+        let mas=[];
+        mas.push("X1","X2","X3")
+        let kramer = document.querySelector('.kramer')
+        for (let i =0; i < 3;i++){ 
+            for (let j =0; j < 3;j++){
+                let newTextField = document.createElement('input');
+                newTextField.type='text';
+                newTextField.size=2;
+                newTextField.classList.add('input-kramer')
+                kramer.appendChild(newTextField)
+                let newText = document.createElement('span');
+                newText.textContent =  mas[j] + (j==2 ? "=": "");
+                kramer.appendChild(newText)
+            }
+            let newTextField = document.createElement('input');
+                newTextField.type='text';
+                newTextField.size=2;
+                newTextField.classList.add('input-kramer')
+                kramer.appendChild(newTextField)
+            let br = document.createElement('br');
+            kramer.appendChild(br)
+        }
+            let newButton = document.createElement('button');
+            newButton.classList.add('generate-button-kramer');
+            newButton.textContent ='Сгенерировать';
+            kramer.appendChild(newButton)
+            let br = document.createElement('br');
+            kramer.appendChild(br)
+    for (let j =0; j < 3;j++){
+                let newText = document.createElement('span');
+                newText.textContent =  mas[j]+"=";
+                kramer.appendChild(newText)
+                let newTextField = document.createElement('input');
+                newTextField.type='text';
+                newTextField.size=2;
+                newTextField.classList.add('input-kramer-return')
+                kramer.appendChild(newTextField)
+                let br = document.createElement('br');
+                kramer.appendChild(br)
+            }    
+            let solutionButton = document.createElement('button');
+            solutionButton.classList.add('solution-button-kramer')
+            solutionButton.textContent ='Решить'
+            kramer.appendChild(solutionButton)
+    }
+    </script>
+<head>
+<body>
+    <div class="kramer"><div>
+    <script src="zad3.js"></script>
+</body>
+</html>
